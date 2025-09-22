@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 DEFAULT_SINK = "@DEFAULT_AUDIO_SINK@"
-TARGET = "1.10"  # = 110 %
+TARGET = "1.50"  # = 110 %
 
 def main():
     if not shutil.which("wpctl"):
@@ -24,7 +24,7 @@ def main():
     # Anzeige des aktuellen Werts
     try:
         out = subprocess.check_output(["wpctl", "get-volume", DEFAULT_SINK], text=True).strip()
-        print("Lautstärke gesetzt auf 110% (wpctl).")
+        print("Lautstärke gesetzt auf 150% (wpctl).")
         print(out)
     except Exception:
         pass
